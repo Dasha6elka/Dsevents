@@ -1,0 +1,35 @@
+{
+    "Processes": [
+      { "ID": "P1" },
+      { "ID": "P2" },
+      { "ID": "P3" }
+    ],
+  
+    "Channels" : [
+      { "ID": "C1_2", "From": "P1", "To": "P2" },
+      { "ID": "C2_1", "From": "P2", "To": "P1"  },
+      { "ID": "C3_1", "From": "P3", "To": "P1"  }
+    ],
+  
+    "Messages" : [
+      { "ID": "m1" },
+      { "ID": "m2" },
+      { "ID": "m3" }
+    ],
+  
+    "Events" : [
+      { "ID": "e1_1", "Seq" : 1, "ProcessID" : "P1" },
+      { "ID": "e1_2", "Seq" : 2, "ProcessID" : "P1", "ChannelID" : "C1_2", "MessageID" : "m1" },
+      { "ID": "e1_3", "Seq" : 3, "ProcessID" : "P1", "ChannelID" : "C3_1", "MessageID" : "m2" },
+      { "ID": "e1_4", "Seq" : 4, "ProcessID" : "P1", "ChannelID" : "C2_1", "MessageID" : "m3" },
+  
+      { "ID": "e2_1", "Seq" : 1, "ProcessID" : "P2" },
+      { "ID": "e2_2", "Seq" : 2, "ProcessID" : "P2" },
+      { "ID": "e2_3", "Seq" : 3, "ProcessID" : "P2", "ChannelID" : "C1_2", "MessageID" : "m1" },
+      { "ID": "e2_4", "Seq" : 4, "ProcessID" : "P2", "ChannelID" : "C2_1", "MessageID" : "m3" },
+  
+      { "ID": "e3_1", "Seq" : 1, "ProcessID" : "P3" },
+      { "ID": "e3_2", "Seq" : 2, "ProcessID" : "P3", "ChannelID" : "C3_1", "MessageID" : "m2" }
+  
+    ]
+  }
